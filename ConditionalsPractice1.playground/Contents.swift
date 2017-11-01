@@ -5,31 +5,31 @@ import UIKit
 //Replace the '__' with comparison operators to make the following statements true
 //Try to use a different comparison operator each time
 
-//45 __ 45
+45 == 45
 
-//-9 __ 9
+-9 != 9
 
-//100 __ 100000
+100 != 100000
 
-//5.6 __ 5.5
+5.6 != 5.5
 
-//"hello" __ "dog"
+"hello" != "dog"
 
-//"Danny" = "Danny"
+"Danny" == "Danny"
 
 
 //Replace the '__' with comparison operators to make the following statements false
 //Try to use a different comparison operator each time
 
-//2 __ 10
+2 == 10
 
-//22 __ 22
+22 != 22
 
-//0 __ -5
+0 == -5
 
-//3.3 __ 3.5
+3.3 == 3.5
 
-//"frog" __ "prince"
+"frog" == "prince"
 
 
 //-----------------------------------------------------------------------------------
@@ -39,21 +39,24 @@ import UIKit
 
 var isHungry = false
 
-//if __________ {
-//    print("Do you want to grab some lunch?")
-//}
+if isHungry {
+    print ("Ok we wont get food")
+}
+else {
+    print("Do you want to grab some lunch?")
+}
 
 
 
 
 //replace the blank with a conditional statement that tests to see if a number is even. Hint: the % operator might be useful here.
-var number: Int // = ______
+var number: Int = 21357
 
-//if __________ {
-//    print("That number is even!")
-//} else {
-//    print("That number is odd!")
-//}
+if number % 2 == 0 {
+    print("That number is even!")
+} else {
+    print("That number is odd!")
+}
 
 
 
@@ -64,12 +67,12 @@ var number: Int // = ______
 var luggageWeight = 55
 var ticketPrice = 150
 
-//if __________ {
-//    ticketPrice += 20
-//    print("An extra $20.00 fee was added to the plane ticket for going over the maximum weight.")
-//} else {
-//    print("No extra fees, have a nice flight!")
-//}
+if luggageWeight > 50 {
+    ticketPrice += 20
+    print("An extra $20.00 fee was added to the plane ticket for going over the maximum weight.")
+} else {
+    print("No extra fees, have a nice flight!")
+}
 
 
 
@@ -79,18 +82,18 @@ var ticketPrice = 150
 
 //replace the blanks with a conditional statement that prints the correct statement depending on the carSpeed that you input.
 
-var carSpeed: Int // = _____
+var carSpeed: Int  = 76785765
 var maximumSpeed = 70
 var minimumSpeed = 45
 
 
-//if __________ {
-//    print("Slow down, you're speeding!")
-//} else if __________ {
-//    print("Speed up, you're holding up traffic!")
-//} else {
-//    print("You are at a great speed, just keep driving.")
-//}
+if carSpeed > 70 {
+    print("Slow down, you're speeding!")
+} else if carSpeed < 45 {
+    print("Speed up, you're holding up traffic!")
+} else {
+    print("You are at a great speed, just keep driving.")
+}
 
 
 
@@ -98,30 +101,22 @@ var minimumSpeed = 45
 
 //challenge: write a conditional statement that mimics an automatic checkout machine at a store.
 //if customerPayment is greater than the totalCheckoutCost, calculate the customer's change and print a statement like this:
-        //Your change is $3.25. Thank you for shopping with us today.
+//Your change is $3.25. Thank you for shopping with us today.
 //if customerPayment is less than the totalCheckoutCost, calculate the remaining balance and print a statement like this:
-        //There is still $2.75 remaining on your balance.
+//There is still $2.75 remaining on your balance.
 //if customerPayment is equal to the totalCheckoutCost, print a statement wishing the customer a nice day.
-        //Thanks and have a nice day!
+//Thanks and have a nice day!
 
 
-var customerPayment: Double // = _______
+var customerPayment: Double = 20.0
 
-var totalCheckoutCost: Double // = _______
-
+var totalCheckoutCost: Double = 9.75
+var difference = totalCheckoutCost - customerPayment
+var change = customerPayment - totalCheckoutCost
 //write conditional statement here:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if totalCheckoutCost > customerPayment {
+    print ("Insufficent funds please give" + "\( difference)" + "more")
+} else {
+    print ("Thank you this is your change " + "\( change)" + " have a nice day.")
+}
